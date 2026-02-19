@@ -1,0 +1,116 @@
+@use 'variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@800&display=swap');
+
+body {
+  font-family: $font_family_base;
+  color: $black;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// === 字體相關變數 ===
+
+// 字粗
+$fontWeightRegular: 400;
+$fontWeightBold: 700;
+
+// 行高
+$lineHeightHeading: 1.25; // 大標題
+$lineHeightSub: 1.4; // 小標題
+$lineHeightBody: 1.6; // 內文
+
+// 字距
+$letterSpacing: 0.05em;
+
+// 字體樣式 Mixins
+
+// 展示用字 - 行高 125% ====================
+
+// 展示用字 1 (52px) - 粗體
+@mixin display1 {
+  font-size: 52px;
+  font-family: $font_family_display;
+  line-height: $lineHeightHeading;
+  letter-spacing: $letterSpacing;
+}
+
+// 展示用字 2 (48px) - 粗體
+@mixin display2 {
+  font-size: 48px;
+  font-family: $font_family_display;
+  line-height: $lineHeightHeading;
+  letter-spacing: $letterSpacing;
+}
+
+// 展示用字 3 (40px) - 粗體
+@mixin display3 {
+  font-size: 40px;
+  font-family: $font_family_display;
+  line-height: $lineHeightHeading;
+  letter-spacing: $letterSpacing;
+}
+
+// 展示用字 4 (32px) - 粗體
+@mixin display4 {
+  font-size: 32px;
+  font-family: $font_family_display;
+  line-height: $lineHeightHeading;
+  letter-spacing: $letterSpacing;
+}
+
+// 大標題 - 行高 125%/140% ====================
+
+// 大標題 1 (36px) - 粗體
+@mixin title1 {
+  font-size: 28px;
+  line-height: $lineHeightHeading;
+  font-weight: $fontWeightBold;
+  letter-spacing: $letterSpacing;
+}
+
+// 大標題 2 (32px) - 一般/粗體
+@mixin title2($isBold: false) {
+  font-size: 24px;
+  line-height: $lineHeightSub;
+  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+  letter-spacing: $letterSpacing;
+}
+
+// 小標題 - 行高 140% ====================
+
+// 小標題 1 (20px) - 一般/粗體
+@mixin subtitle1($isBold: false) {
+  font-size: 20px;
+  line-height: $lineHeightSub;
+  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+  letter-spacing: $letterSpacing;
+}
+
+// 內文 - 行高 160% ====================
+
+// 內文 1 (18px) - 一般/粗體
+@mixin body1($isBold: false) {
+  font-size: 18px;
+  line-height: $lineHeightBody;
+  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+  letter-spacing: $letterSpacing;
+}
+
+// 內文 2 (16px) - 一般/粗體
+@mixin body2($isBold: false) {
+  font-size: 16px;
+  line-height: $lineHeightBody;
+  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+  letter-spacing: $letterSpacing;
+}
+
+// 內文 3 (14px) - 一般/粗體
+@mixin body3($isBold: false) {
+  font-size: 14px;
+  line-height: $lineHeightBody;
+  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+  letter-spacing: $letterSpacing;
+}

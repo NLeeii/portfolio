@@ -1,5 +1,26 @@
-# Vue 3 + TypeScript + Vite
+# NLee Portfolio Website
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+個人作品集網站，展示設計與前端開發能力。
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 使用技術 - Tech Stack
+
+- **Vue 3**: Composition API
+- **TypeScript**: 靜態型別檢查
+- **Vite**: 快速開發建置工具
+- **SCSS**: 樣式預處理
+
+## 開發 - Development
+
+```bash
+# 安裝依賴
+npm install
+
+# 啟動開發伺服器
+npm run dev
+```
+
+## 建置 - Build
+
+```bash
+npm run build
+```

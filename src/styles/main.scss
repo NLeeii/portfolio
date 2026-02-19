@@ -1,0 +1,19 @@
+@use 'fonts';
+@use 'reset';
+@use 'typography';
+
+// 通用class
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  // @include mobile {
+  //   padding: 0;
+  // }
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+}
