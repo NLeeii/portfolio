@@ -1,16 +1,30 @@
 <script setup lang="ts">
-// Navbar Logic
+import logo from '@/assets/images/logo.svg'; 
+
+// Navbar
+const navLinks = [
+  {name: 'ABOUT', href: '#about'},
+  { name: 'SKILLS', href: '#skills' },
+  { name: 'PROJECTS', href: '#projects' },
+  { name: 'EXPERIENCE', href: '#experience' },
+  { name: 'CONTACT', href: '#contact' },
+]
+
+
 </script>
 
 <template>
   <nav class="navbar">
     <div class="container navbar_container">
-      <div class="logo">Logo</div>
+      <div class="logo">
+        <a href="#">
+            <img :src="logo" alt="NiNi Logo" />
+        </a>
+      </div>
       <ul class="nav_links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li v-for="link in navLinks" :key="link.name">
+          <a :href="link.href">{{ link.name }}</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -37,5 +51,15 @@
 .nav_links {
   display: flex;
   gap: 2rem;
+  @include body2;
+  li {
+    transition: all .3s;
+    border-bottom: 2px solid transparent;
+    &:hover,
+    &:active {
+      color: $primary_default;
+      border-bottom: 2px solid $primary_default;
+    }
+  }
 }
 </style>
