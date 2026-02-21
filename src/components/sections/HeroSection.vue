@@ -28,7 +28,6 @@ import banner from '@/assets/images/main_banner.svg'
 <style lang="scss" scoped>
 .hero_section {
   display: flex;
-  // align-items: center;
   gap: 32px;
   padding: 100px 32px 0;
   min-height: 580px;
@@ -79,6 +78,9 @@ import banner from '@/assets/images/main_banner.svg'
   .title {
     text-wrap: nowrap;
     @include display1;
+    @include tablet {
+      @include display3;
+    }
   }
 
   .button {
@@ -93,5 +95,8 @@ import banner from '@/assets/images/main_banner.svg'
   text-align: center;
   color: $white;
   background-color: $primary_default;
+  @include tablet {
+    @include title1;
+  }
 }
 </style>
