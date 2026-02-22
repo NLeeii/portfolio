@@ -15,8 +15,8 @@ import Tag from '../common/Tag.vue';
           <div class="about_header">
             <h3>李妮 Ni Lee</h3>
             <div class="tag">
-              <Tag text="# 團隊協作"/>
-              <Tag text="# 自學能力"/>
+              <Tag text="# 團隊協作" size="md"/>
+              <Tag text="# 自學能力" size="md"/>
             </div>
           </div>
           <div class="about_desc">
