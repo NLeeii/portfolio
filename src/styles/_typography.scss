@@ -75,7 +75,15 @@ $letterSpacing: 0.05em;
 @mixin title2($isBold: false) {
   font-size: 24px;
   line-height: $lineHeightSub;
-  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+
+  @if $isBold {
+    font-weight: $fontWeightBold;
+  }
+
+  @else {
+    font-weight: $fontWeightRegular;
+  }
+
   letter-spacing: $letterSpacing;
 }
 
@@ -85,7 +93,15 @@ $letterSpacing: 0.05em;
 @mixin subtitle1($isBold: false) {
   font-size: 20px;
   line-height: $lineHeightSub;
-  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+
+  @if $isBold {
+    font-weight: $fontWeightBold;
+  }
+
+  @else {
+    font-weight: $fontWeightRegular;
+  }
+
   letter-spacing: $letterSpacing;
 }
 
@@ -95,7 +111,15 @@ $letterSpacing: 0.05em;
 @mixin body1($isBold: false) {
   font-size: 18px;
   line-height: $lineHeightBody;
-  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+
+  @if $isBold {
+    font-weight: $fontWeightBold;
+  }
+
+  @else {
+    font-weight: $fontWeightRegular;
+  }
+
   letter-spacing: $letterSpacing;
 }
 
@@ -103,7 +127,15 @@ $letterSpacing: 0.05em;
 @mixin body2($isBold: false) {
   font-size: 16px;
   line-height: $lineHeightBody;
-  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+
+  @if $isBold {
+    font-weight: $fontWeightBold;
+  }
+
+  @else {
+    font-weight: $fontWeightRegular;
+  }
+
   letter-spacing: $letterSpacing;
 }
 
@@ -111,6 +143,14 @@ $letterSpacing: 0.05em;
 @mixin body3($isBold: false) {
   font-size: 14px;
   line-height: $lineHeightBody;
-  font-weight: if($isBold, $fontWeightBold, $fontWeightRegular);
+
+  @if $isBold {
+    font-weight: $fontWeightBold;
+  }
+
+  @else {
+    font-weight: $fontWeightRegular;
+  }
+
   letter-spacing: $letterSpacing;
 }
