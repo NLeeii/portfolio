@@ -1,13 +1,14 @@
 <script setup lang="ts">
 type TagProps = {
   text: string;
+  size: 'sm' | 'md';
 }
 
 defineProps<TagProps>()
 
 </script>
 <template>
-  <div class="tag">
+  <div :class="['tag', `tag_${size}`]">
      <span>{{ text }}</span>
   </div>
 </template>
@@ -22,5 +23,9 @@ defineProps<TagProps>()
   border: 1px solid $gray_dark;
   @include body3;
   color: $text;
+  &.tag_sm {
+    padding: 2px 12px;
+    font-size: 13px;
+  }
 }
 </style>
