@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import Navbar from './components/layout/Navbar.vue';
-import Footer from './components/layout/Footer.vue';
-import HeroSection from './components/sections/HeroSection.vue';
-import AboutSection from './components/sections/AboutSection.vue';
-import SkillsSection from './components/sections/SkillsSection.vue';
-import ProjectsSection from './components/sections/ProjectsSection.vue';
-import ExperienceSection from './components/sections/ExperienceSection.vue';
-import ContactSection from './components/sections/ContactSection.vue';
+import Navbar from '@/components/layout/Navbar.vue';
+import Footer from '@/components/layout/Footer.vue';
+import HeroSection from '@/components/sections/HeroSection.vue';
+import AboutSection from '@/components/sections/AboutSection.vue';
+import SkillsSection from '@/components/sections/SkillsSection.vue';
+import ProjectsSection from '@/components/sections/ProjectsSection.vue';
+import ExperienceSection from '@/components/sections/ExperienceSection.vue';
+import ContactSection from '@/components/sections/ContactSection.vue';
+import SiteNoticeModal from '@/components/common/SiteNoticeModal.vue';
 </script>
 
 <template>
   <div class="app_container">
+    <SiteNoticeModal />
     <Navbar />
     <main>
       <HeroSection />
