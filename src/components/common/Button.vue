@@ -1,7 +1,7 @@
 <script setup lang="ts">
 type ButtonProps = {
   text: string;
-  color: 'white' | 'yellow';
+  color: 'white' | 'yellow' | 'black';
   icon?: string;
   href: string;
   target?: boolean;
@@ -34,6 +34,15 @@ defineProps<ButtonProps>()
     &:hover {
       background-color: $white;
       border: 1px solid $white;
+    }
+  }
+  .btn_black {
+    border: 1px solid $black;
+    background-color: $black;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $black;
     }
   }
 </style>

@@ -55,7 +55,7 @@ $letterSpacing: 0.05em;
 
 // 展示用字 4 (32px) - 粗體
 @mixin display4 {
-  font-size: 36px;
+  font-size: 32px;
   font-family: $font_family_display;
   line-height: $lineHeightHeading;
   letter-spacing: $letterSpacing;
