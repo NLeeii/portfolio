@@ -16,6 +16,7 @@ type ProjectData = {
   description: string;
   detailDescription?: string;
   tag: string[];
+  skill: string[];
   image: string;
   link?: ProjectLink[];
 }
@@ -69,7 +70,7 @@ defineEmits(['close'])
                   <h3>專案簡介</h3>
                   <ul>
                     <li>專案定位：{{ project.tag.includes('團體專題') ? '團體專題' : '個人專案' }}</li>
-                    <li>使用技術：{{ project.tag.join(', ') }}</li>
+                    <li>使用技術：{{ project.skill.join(', ') }}</li>
                   </ul>
                 </div>
                 <div class="info_section">

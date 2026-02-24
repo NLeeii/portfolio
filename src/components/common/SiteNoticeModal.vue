@@ -19,24 +19,24 @@ const closeModal = () => {
 
 <template>
   <Transition name="fade">
-    <div class="notice-overlay" v-if="isVisible" @click.self="closeModal">
-      <div class="notice-modal">
-        <button class="close-btn" @click="closeModal">✖</button>
-        <div class="notice-header">
+    <div class="notice_overlay" v-if="isVisible" @click.self="closeModal">
+      <div class="notice_modal">
+        <button class="close_btn" @click="closeModal">✖</button>
+        <div class="notice_header">
           <h2>網站建置公告</h2>
         </div>
-        <div class="notice-content">
+        <div class="notice_content">
           <p>您好，感謝您的造訪!</p>
           <p>
             本網站正在 <strong>積極開發與趕工中</strong> ，目前僅包含部分靜態展示內容，完整資訊及動畫效果待補齊。
           </p>
           <p>
-            完整專案預計將於 <strong>2/25</strong> 完成更新，屆時歡迎您再次前來查看完整版作品集！
+            完整專案預計將於 <strong>2月底</strong> 完成更新，屆時歡迎您再次前來查看完整版作品集！
           </p>
           <p class="signature">- Ni Lee</p>
         </div>
-        <div class="notice-footer">
-          <button class="ok-btn" @click="closeModal">開始瀏覽</button>
+        <div class="notice_footer">
+          <button class="ok_btn" @click="closeModal">開始瀏覽</button>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ const closeModal = () => {
 </template>
 
 <style lang="scss" scoped>
-.notice-overlay {
+.notice_overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +58,7 @@ const closeModal = () => {
   padding: 20px;
 }
 
-.notice-modal {
+.notice_modal {
   position: relative;
   width: 100%;
   max-width: 500px;
@@ -70,7 +70,7 @@ const closeModal = () => {
   flex-direction: column;
 }
 
-.close-btn {
+.close_btn {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -92,7 +92,7 @@ const closeModal = () => {
   }
 }
 
-.notice-header {
+.notice_header {
   background-color: $accent;
   padding: 24px 30px;
   
@@ -103,7 +103,7 @@ const closeModal = () => {
   }
 }
 
-.notice-content {
+.notice_content {
   padding: 30px;
   @include body1;
   color: #333;
@@ -126,13 +126,13 @@ const closeModal = () => {
   }
 }
 
-.notice-footer {
+.notice_footer {
   padding: 20px 30px;
   background-color: $gray_light;
   display: flex;
   justify-content: flex-end;
   
-  .ok-btn {
+  .ok_btn {
     padding: 10px 24px;
     @include body1(true);
     background-color: $black;
