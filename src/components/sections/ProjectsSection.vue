@@ -38,14 +38,16 @@ const closeDetail = () => {
         />
       </div>
       
-      <!-- 彈窗組件 -->
-      <Transition name="fade">
-        <ProjectDetail 
-          v-if="selectedProject !== null" 
-          :project="selectedProject" 
-          @close="closeDetail" 
-        />
-      </Transition>
+      <!-- 彈窗組件使用 Teleport 避免被 AOS 的 transform 破壞 fixed 佈局 -->
+      <Teleport to="body">
+        <Transition name="fade">
+          <ProjectDetail 
+            v-if="selectedProject !== null" 
+            :project="selectedProject" 
+            @close="closeDetail" 
+          />
+        </Transition>
+      </Teleport>
 
     </div>
   </section>
