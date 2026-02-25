@@ -58,18 +58,21 @@ const swiperModules = [Autoplay, Navigation];
   display: flex;
   gap: 32px;
   padding: 100px 32px 0;
-  min-height: 580px;
+  min-height: 600px;
   background-color: $bg;
   text-align: center;
+  
   @include desktop {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 40px;
-    padding: 80px 16px 0;
+    padding: 120px 16px 0;
   }  
 
   @include tablet {
-    gap: 50px;
+    gap: 80px;
+    min-height: auto; // 讓內容自然撐開
   }
 }
 
@@ -78,6 +81,10 @@ const swiperModules = [Autoplay, Navigation];
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  @include desktop {
+    order: 2; /* 在由上往下排時，確保圖片在下方 */
+  }
 
   @include tablet {
     width: 100%;
@@ -184,8 +191,12 @@ const swiperModules = [Autoplay, Navigation];
   gap: 16px;
   padding: 32px;
 
+  @include desktop {
+    width: 100%;
+    order: 1; /* 在由上往下排時，確保文字在上方 */
+  }
+
   @include tablet {
-    width: 100%; 
     padding: 0; 
   }
 
