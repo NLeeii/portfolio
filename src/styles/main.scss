@@ -2,6 +2,12 @@
 @use 'reset';
 @use 'typography';
 
+html {
+  scroll-behavior: smooth;
+  // 避免導航列 (Navbar) 在跳轉時遮擋區塊標題
+  scroll-padding-top: $header_height;
+}
+
 // 通用class
 .container {
   width: 100%;
