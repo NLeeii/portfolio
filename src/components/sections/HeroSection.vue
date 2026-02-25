@@ -68,7 +68,7 @@ onMounted(() => {
     </div>
   </section>
   <div class="hero_deco_txt">
-    <p>DESIGN MEET LOGIC</p>
+    <p>DESIGN MEETS LOGIC</p>
   </div>
 </template>
 
