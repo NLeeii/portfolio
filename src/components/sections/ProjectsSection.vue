@@ -23,7 +23,7 @@ const closeDetail = () => {
 </script>
 
 <template>
-  <section id="projects" class="section projects_section">
+  <section id="projects" class="section projects_section" data-aos ="fade-up" data-aos-duration="1200">
     <div class="container">
       <h2 class="section_title">PROJECTS</h2>
       <div class="project_card_wrapper">
@@ -53,10 +53,10 @@ const closeDetail = () => {
 
 <style lang="scss" scoped>
 .projects_section {
-  padding: 100px 0;
+  padding: 80px 0;
 
   .section_title {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     @include display4;
   }
 }

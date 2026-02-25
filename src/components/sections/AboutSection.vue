@@ -4,7 +4,7 @@ import Tag from '../common/Tag.vue';
 </script>
 
 <template>
-  <section id="about" class="section about_section">
+  <section id="about" class="section about_section" data-aos ="fade-up" data-aos-duration="1200">
     <div class="container">
       <h2 class="section_title">ABOUT ME</h2>
       <div class="content">

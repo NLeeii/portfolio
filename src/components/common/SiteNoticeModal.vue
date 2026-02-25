@@ -8,7 +8,7 @@ onMounted(() => {
   setTimeout(() => {
     isVisible.value = true;
     document.body.style.overflow = 'hidden';
-  }, 500);
+  }, 1800);
 })
 
 const closeModal = () => {

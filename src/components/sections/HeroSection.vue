@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import MainButton from '@/components/common/Button.vue'
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { onMounted, ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay, Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
 
 import banner from '@/assets/images/main_banner.svg'
 import deco1 from '@/assets/images/banner_deco1.svg'
@@ -12,11 +13,29 @@ import character2 from '@/assets/images/character_designer.svg'
 import character3 from '@/assets/images/character_engineer.svg'
 
 const swiperModules = [Autoplay, Navigation];
+
+// 打字機效果
+const fullText = "Hello, I'm NiNi"
+const displayText = ref('')
+
+onMounted(() => {
+  let i = 0
+  // 每 120 毫秒打一個字
+  const timer = setInterval(() => {
+    if(i < fullText.length) {
+      displayText.value += fullText.charAt(i)
+      i++
+    } else {
+      clearInterval(timer)
+    }
+  }, 120)
+})
+
 </script>
 
 <template>
   <section id="hero" class="section hero_section">
-    <div class="hero_pic">
+    <div class="hero_pic"  data-aos ="fade-right" data-aos-delay="300">
       <div class="img_wrapper">
         <img :src="banner" alt="banner_picture" class="main_banner">
         <img :src="deco1" alt="banner_deco" class="banner_deco1">
@@ -39,9 +58,9 @@ const swiperModules = [Autoplay, Navigation];
       </div>
     </div>
     <div class="hero_content">
-      <h1 class="title">Hello, I'm NiNi</h1>
-      <p class="slogan">Designer x Developer</p>
-      <div class="button">
+      <h1 class="title">{{ displayText }}</h1>
+      <p class="slogan" data-aos ="fade-up" data-aos-delay="800">Designer x Developer</p>
+      <div class="button" data-aos ="fade-up" data-aos-delay="1000">
         <MainButton text="作品展示" color="white" href="#projects" />
         <!-- <MainButton text="履歷" color="white" href="#experience"/> -->
         <MainButton text="GitHub" color="white" href="https://github.com/NLeeii" :target=true />
