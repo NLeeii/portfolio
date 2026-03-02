@@ -31,7 +31,7 @@ const closeModal = () => {
             本網站正在 <strong>積極開發與趕工中</strong> ，目前僅包含部分靜態展示內容，完整資訊及動畫效果待補齊。
           </p>
           <p>
-            完整專案預計將於 <strong>2月底</strong> 完成更新，屆時歡迎您再次前來查看完整版作品集！
+            完整專案預計將於 <strong>3月初</strong> 完成更新，屆時歡迎您再次前來查看完整版作品集！
           </p>
           <p class="signature">- Ni Lee</p>
         </div>
